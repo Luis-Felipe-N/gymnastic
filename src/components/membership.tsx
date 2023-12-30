@@ -1,13 +1,28 @@
 'use client'
 
 import { CheckCircle } from '@phosphor-icons/react'
-import { ReactNode } from 'react'
 
-function Header({ children }: any) {
+const Item = ({ children, active = true }) => {
+  return (
+    <li className={`flex gap-2 items-center ${!active && 'text-zinc-500'}`}>
+      <CheckCircle size={24} />
+
+      <span>{children}</span>
+    </li>
+  )
+}
+
+const Content = ({ children }) => {
+  return (
+    <ul className="p-8 border-t-2 border-zinc-800 py  space-y-6">{children}</ul>
+  )
+}
+
+const Header = ({ children }: any) => {
   return <div className="p-8 text-center">{children}</div>
 }
 
-function Price({ children }: any) {
+const Price = ({ children }: any) => {
   return (
     <span className="block">
       <span className="text-2xl text-cyan-400 font-semibold">{children}</span>
@@ -16,7 +31,7 @@ function Price({ children }: any) {
   )
 }
 
-function Title({ children }: any) {
+const Title = ({ children }: any) => {
   return <p className="text-3xl mb-4 ">{children}</p>
 }
 
@@ -24,44 +39,6 @@ function MembershipsItem({ children }: any) {
   return (
     <div className="bg-zinc-900 border-2 border-zinc-800 rounded-2xl w-full">
       {children}
-
-      <ul className="p-8 border-t-2 border-zinc-800 py text-center space-y-6">
-        <li className="flex gap-2 items-center">
-          <CheckCircle size={24} />
-
-          <span>Gym without Trainers</span>
-        </li>
-
-        <li className="flex gap-2 items-center">
-          <CheckCircle size={24} />
-
-          <span>Gym without Trainers</span>
-        </li>
-
-        <li className="flex gap-2 items-center">
-          <CheckCircle size={24} />
-
-          <span>Gym without Trainers</span>
-        </li>
-
-        <li className="flex gap-2 items-center">
-          <CheckCircle size={24} />
-
-          <span>Gym without Trainers</span>
-        </li>
-
-        <li className="flex gap-2 items-center">
-          <CheckCircle size={24} />
-
-          <span>Gym without Trainers</span>
-        </li>
-
-        <li className="flex gap-2 items-center">
-          <CheckCircle size={24} />
-
-          <span>Gym without Trainers</span>
-        </li>
-      </ul>
     </div>
   )
 }
@@ -79,12 +56,29 @@ export function Memberships() {
         </p>
       </div>
 
-      <div className="grid grid-cols-4 gap-8 mt-20">
+      <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 sm:px-24 gap-8 mt-20">
         <MembershipsItem>
           <MembershipsItem.Header>
             <MembershipsItem.Title>Básico</MembershipsItem.Title>
             <MembershipsItem.Price>R$20</MembershipsItem.Price>
           </MembershipsItem.Header>
+          <MembershipsItem.Content>
+            <MembershipsItem.Item>
+              Academia sem treinadores
+            </MembershipsItem.Item>
+
+            <MembershipsItem.Item>Acesso ilimitado</MembershipsItem.Item>
+            <MembershipsItem.Item>Acesso a todo clube</MembershipsItem.Item>
+            <MembershipsItem.Item active={false}>
+              Acesso a todo treinamento
+            </MembershipsItem.Item>
+            <MembershipsItem.Item active={false}>
+              Estúdio exclusivo
+            </MembershipsItem.Item>
+            <MembershipsItem.Item active={false}>
+              Sessão adicional
+            </MembershipsItem.Item>
+          </MembershipsItem.Content>
         </MembershipsItem>
 
         <MembershipsItem>
@@ -92,6 +86,23 @@ export function Memberships() {
             <MembershipsItem.Title>Standard</MembershipsItem.Title>
             <MembershipsItem.Price>R$35</MembershipsItem.Price>
           </MembershipsItem.Header>
+          <MembershipsItem.Content>
+            <MembershipsItem.Item>
+              Academia sem treinadores
+            </MembershipsItem.Item>
+
+            <MembershipsItem.Item>Acesso ilimitado</MembershipsItem.Item>
+            <MembershipsItem.Item>Acesso a todo clube</MembershipsItem.Item>
+            <MembershipsItem.Item>
+              Acesso a todo treinamento
+            </MembershipsItem.Item>
+            <MembershipsItem.Item active={false}>
+              Estúdio exclusivo
+            </MembershipsItem.Item>
+            <MembershipsItem.Item active={false}>
+              Sessão adicional
+            </MembershipsItem.Item>
+          </MembershipsItem.Content>
         </MembershipsItem>
 
         <MembershipsItem>
@@ -99,6 +110,21 @@ export function Memberships() {
             <MembershipsItem.Title>Profissional</MembershipsItem.Title>
             <MembershipsItem.Price>R$50</MembershipsItem.Price>
           </MembershipsItem.Header>
+          <MembershipsItem.Content>
+            <MembershipsItem.Item>
+              Academia sem treinadores
+            </MembershipsItem.Item>
+
+            <MembershipsItem.Item>Acesso ilimitado</MembershipsItem.Item>
+            <MembershipsItem.Item>Acesso a todo clube</MembershipsItem.Item>
+            <MembershipsItem.Item>
+              Acesso a todo treinamento
+            </MembershipsItem.Item>
+            <MembershipsItem.Item>Estúdio exclusivo</MembershipsItem.Item>
+            <MembershipsItem.Item active={false}>
+              Sessão adicional
+            </MembershipsItem.Item>
+          </MembershipsItem.Content>
         </MembershipsItem>
 
         <MembershipsItem>
@@ -106,15 +132,28 @@ export function Memberships() {
             <MembershipsItem.Title>Familia</MembershipsItem.Title>
             <MembershipsItem.Price>R$65</MembershipsItem.Price>
           </MembershipsItem.Header>
+
+          <MembershipsItem.Content>
+            <MembershipsItem.Item>
+              Academia sem treinadores
+            </MembershipsItem.Item>
+
+            <MembershipsItem.Item>Acesso ilimitado</MembershipsItem.Item>
+            <MembershipsItem.Item>Acesso a todo clube</MembershipsItem.Item>
+            <MembershipsItem.Item>
+              Acesso a todo treinamento
+            </MembershipsItem.Item>
+            <MembershipsItem.Item>Estúdio exclusivo</MembershipsItem.Item>
+            <MembershipsItem.Item>Sessão adicional</MembershipsItem.Item>
+          </MembershipsItem.Content>
         </MembershipsItem>
-        {/* <MembershipsItem />
-        <MembershipsItem />
-        <MembershipsItem /> */}
       </div>
     </section>
   )
 }
 
+MembershipsItem.Item = Item
+MembershipsItem.Content = Content
 MembershipsItem.Header = Header
 MembershipsItem.Title = Title
 MembershipsItem.Price = Price
