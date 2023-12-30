@@ -7,29 +7,29 @@ export function Header() {
         <h1>GYMNASTIC</h1>
 
         <nav>
-          <ul className="flex justify-between">
-            <li>
+          <ul className="flex justify-between font-medium">
+            <li className="text-cyan-400">
               <Link href={'/'}>Home</Link>
             </li>
 
             <li>
-              <Link href={'/'}>Class</Link>
+              <Link href={'/'}>Aulas</Link>
             </li>
 
             <li>
-              <Link href={'/'}>Membership</Link>
+              <Link href={'/'}>Membros</Link>
             </li>
 
             <li>
-              <Link href={'/'}>Trainers</Link>
+              <Link href={'/'}>Personal trainers</Link>
             </li>
 
             <li>
-              <Link href={'/'}>Trainers</Link>
+              <Link href={'/'}>Blog</Link>
             </li>
 
             <li>
-              <Link href={'/'}>Trainers</Link>
+              <Link href={'/'}>Contato</Link>
             </li>
           </ul>
         </nav>

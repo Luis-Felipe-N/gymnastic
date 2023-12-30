@@ -1,14 +1,16 @@
 import { Header } from '@/components/header'
-import { Hero } from '@/components/hero'
+// import { Hero } from '@/components/hero'
 import { ChooseUs } from '@/components/choose-us'
-import Image from 'next/image'
+import { Memberships } from '@/components/membership'
+import { Hero } from '@/components/hero'
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col">
+    <main className="flex min-h-screen flex-col bg-zinc-950">
       <Header />
       <Hero />
       <ChooseUs />
+      <Memberships />
     </main>
   )
 }
