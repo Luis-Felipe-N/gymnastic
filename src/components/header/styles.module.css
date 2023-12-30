@@ -1,0 +1,29 @@
+@media (max-width: 768px) {
+  .header {
+    position: absolute;
+    padding: 0 !important;
+    z-index: -1;
+    top: -900px;
+    right: 0;
+    left: -100%;
+    z-index: 100;
+    padding: 2rem;
+    width: 200%;
+    transition: .2s;
+  }
+
+  .header.active {
+    top: 70px;
+  }
+
+  .header ul {
+    flex-direction: column;
+    width: 100%;
+    padding: 2rem;
+    gap: 1rem;
+  }
+
+  .header ul li {
+    margin: 0 !important;
+  }
+} 

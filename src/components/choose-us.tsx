@@ -21,7 +21,7 @@ export function ChooseUsItem() {
 
 export function ChooseUs() {
   return (
-    <section className="p-12 bg-zinc-900">
+    <section className="lg:p-12 p-8 bg-zinc-900">
       <div className="text-center">
         <h2 className="text-4xl">Por que nos escolher?</h2>
 
@@ -32,9 +32,9 @@ export function ChooseUs() {
         </p>
       </div>
 
-      <div className="grid grid-cols-[3fr_1fr] max-w-[1400px] mx-auto gap-12 my-20 bg-zinc-800 rounded-2xl overflow-hidden">
+      <div className="grid lg:grid-cols-[3fr_1fr] grid-cols-1 max-w-[1400px] mx-auto gap-12 my-20 bg-zinc-800 rounded-2xl overflow-hidden">
         <div>
-          <div className="grid grid-cols-2 gap-12 p-12">
+          <div className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-12 p-12">
             <ChooseUsItem />
             <ChooseUsItem />
             <ChooseUsItem />
@@ -46,7 +46,7 @@ export function ChooseUs() {
           src="https://images.pexels.com/photos/1229356/pexels-photo-1229356.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
           width={1260}
           height={1260}
-          className="object-cover object-center h-full"
+          className="object-cover object-center h-full lg:block hidden"
           alt=""
         />
       </div>

@@ -1,8 +1,7 @@
-import { Header } from '@/components/header'
-// import { Hero } from '@/components/hero'
 import { ChooseUs } from '@/components/choose-us'
 import { Memberships } from '@/components/membership'
 import { Hero } from '@/components/hero'
+import { Header } from '@/components/header'
 
 export default function Home() {
   return (

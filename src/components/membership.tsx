@@ -2,7 +2,7 @@
 
 import { CheckCircle } from '@phosphor-icons/react'
 
-const Item = ({ children, active = true }) => {
+const Item = ({ children, active = true }: any) => {
   return (
     <li className={`flex gap-2 items-center ${!active && 'text-zinc-500'}`}>
       <CheckCircle size={24} />
@@ -12,7 +12,7 @@ const Item = ({ children, active = true }) => {
   )
 }
 
-const Content = ({ children }) => {
+const Content = ({ children }: any) => {
   return (
     <ul className="p-8 border-t-2 border-zinc-800 py  space-y-6">{children}</ul>
   )
@@ -45,7 +45,7 @@ function MembershipsItem({ children }: any) {
 
 export function Memberships() {
   return (
-    <section className="max-w-[1400px] mx-auto py-24">
+    <section className="max-w-[1400px] mx-auto py-24 lg:px-0 md:px-0 px-8">
       <div className="text-center">
         <h2 className="text-4xl">Por que nos escolher?</h2>
 
@@ -56,7 +56,7 @@ export function Memberships() {
         </p>
       </div>
 
-      <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 sm:px-24 gap-8 mt-20">
+      <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1  gap-8 mt-20">
         <MembershipsItem>
           <MembershipsItem.Header>
             <MembershipsItem.Title>Básico</MembershipsItem.Title>
