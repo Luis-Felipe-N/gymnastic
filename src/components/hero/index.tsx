@@ -1,20 +1,25 @@
+'use client'
+
 import Image from 'next/image'
 import styles from './styles.module.css'
+import { ArrowArcLeft, ArrowRight, ArrowUpRight } from '@phosphor-icons/react'
 
 export function Hero() {
   return (
     <section className="my-24 max-w-[1400px] mx-auto lg:px-0 md:px-24 px-8">
       <div className="grid lg:grid-cols-2">
         <h3 className="text-6xl">
-          Take care your body and its the only place you have to life
+          Cuide do seu corpo, pois é o único lugar que você tem para viver
         </h3>
         <div className="mt-12 lg:mt-0">
           <p className="text-xl mb-4">
-            Gym session or brisk walk can help. Physical activity <br />{' '}
-            simulates many brain chemicals that may leave you.
+            Uma sessão de academia ou uma caminhada rápida podem ajudar. A
+            atividade física estimula muitas substâncias químicas cerebrais que
+            podem beneficiar você
           </p>
-          <button className="px-8 py-3 rounded-full bg-cyan-300 text-zinc-950 font-semibold">
-            Bea Member
+          <button className="px-8 py-3 flex items-center gap-2  rounded-full bg-cyan-300 text-zinc-950 font-semibold">
+            Torne-se membro
+            <ArrowUpRight weight="bold" />
           </button>
         </div>
       </div>

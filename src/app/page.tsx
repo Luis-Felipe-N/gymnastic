@@ -2,6 +2,7 @@ import { ChooseUs } from '@/components/choose-us'
 import { Memberships } from '@/components/membership'
 import { Hero } from '@/components/hero'
 import { Header } from '@/components/header'
+import { Testimonial } from '@/components/testimonial'
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <Hero />
       <ChooseUs />
       <Memberships />
+      <Testimonial />
     </main>
   )
 }

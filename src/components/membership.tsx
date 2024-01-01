@@ -45,7 +45,7 @@ function MembershipsItem({ children }: any) {
 
 export function Memberships() {
   return (
-    <section className="max-w-[1400px] mx-auto py-24 lg:px-0 md:px-0 px-8">
+    <section className="max-w-[1400px] w-full mx-auto py-24 lg:px-0 md:px-0 px-8">
       <div className="text-center">
         <h2 className="text-4xl">Por que nos escolher?</h2>
 
