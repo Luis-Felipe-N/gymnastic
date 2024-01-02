@@ -3,6 +3,7 @@ import { Memberships } from '@/components/membership'
 import { Hero } from '@/components/hero'
 import { Header } from '@/components/header'
 import { Testimonial } from '@/components/testimonial'
+import { Join } from '@/components/join'
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <ChooseUs />
       <Memberships />
       <Testimonial />
+      <Join />
     </main>
   )
 }
