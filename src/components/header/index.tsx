@@ -51,7 +51,7 @@ export function Header() {
           >
             <ul className="flex justify-between font-medium bg-zinc-900 rounded-3xl gap-12">
               <li className="text-cyan-400">
-                <Link href={'/'}>Home</Link>
+                <Link href={'/'}>Início</Link>
               </li>
 
               <li>
@@ -59,11 +59,11 @@ export function Header() {
               </li>
 
               <li>
-                <Link href={'/'}>Membros</Link>
+                <Link href={'/'}>Associação</Link>
               </li>
 
               <li>
-                <Link href={'/'}>Personal trainers</Link>
+                <Link href={'/'}>Treinadores</Link>
               </li>
 
               <li>

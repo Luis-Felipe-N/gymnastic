@@ -4,6 +4,7 @@ import { Hero } from '@/components/hero'
 import { Header } from '@/components/header'
 import { Testimonial } from '@/components/testimonial'
 import { Join } from '@/components/join'
+import { Footer } from '@/components/footer'
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Memberships />
       <Testimonial />
       <Join />
+      <Footer />
     </main>
   )
 }
